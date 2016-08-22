@@ -1,0 +1,3 @@
+30_nogetauxvalonbsd.diff
+35_hurd_enable_secure.diff
+enable_locale.diff
