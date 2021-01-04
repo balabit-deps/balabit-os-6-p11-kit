@@ -1,3 +1,21 @@
+p11-kit (0.23.2-5~ubuntu16.04.2) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: multiple integer overflows
+    - debian/patches/CVE-2020-29361-1.patch: check for arithmetic overflows
+      before allocating in p11-kit/iter.c, p11-kit/lists.c,
+      p11-kit/proxy.c, p11-kit/rpc-message.c, p11-kit/rpc-message.h,
+      p11-kit/rpc-server.c, trust/index.c.
+    - debian/patches/CVE-2020-29361-2.patch: add reallocarray and follow-up
+      to arithmetic overflow fix in common/compat.c, common/compat.h,
+      p11-kit/rpc-message.c.
+    - CVE-2020-29361
+  * SECURITY UPDATE: heap over-read in the RPC protocol
+    - debian/patches/CVE-2020-29362.patch: fix bounds check in
+      p11-kit/rpc-message.c.
+    - CVE-2020-29362
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 04 Jan 2021 14:18:11 -0500
+
 p11-kit (0.23.2-5~ubuntu16.04.1) xenial-proposed; urgency=medium
 
   * Backport to Ubuntu 16.04 LTS for improved manpages (LP: #1615449)
